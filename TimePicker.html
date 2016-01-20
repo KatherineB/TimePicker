@@ -6,22 +6,51 @@
    border-style: solid;
    border-width: 3px;
    background-color: #ccc;
-}
-.hourPanel{
-   float: left;
-}
-.rightPanel{
-   float: right;
+   width: 360px;
+   font-family: arial, "san serif";
+   font-size: 16px;
 }
 .pickBtn{
+  margin: 3px;
   border-style: solid;
   border-width: 1px;
-  height: 20px;
-  width: 30px;
+  height: 18px;
+  width: 22px;
   float: left;
   text-align: center;
   background-color: #fff;
 }
+.hourPanel{
+   background-color: #fff;
+   float: left;
+}
+.rightPanel{
+   background-color: #fff;
+   float: right;
+}
+.lowerSection{
+   background-color: #ccc;
+   height: 40px;
+}
+.controlBtn{
+  background-color: #fff;
+  margin: 8px;
+  float: left;
+  width: 55px;
+  text-align: center;
+}
+.timeDisplayBox{
+  background-color: #fff;
+  margin: 8px;
+  float: left;
+  font-size: 24px;
+  text-align: center;
+}
+.display{
+  float: left;
+  margin: 2px;
+}
+
 </style>
 
 </head>
@@ -49,15 +78,47 @@
 		   </div>
 		   <div class="rightPanel">
 		       <div class="tens">
+			      <div class="pickBtn">0</div>
+			      <div class="pickBtn">1</div>
+				  <div class="pickBtn">2</div>
+				  <div class="pickBtn">3</div>
+				  <div class="pickBtn">4</div>
+				  <div class="pickBtn">5</div>
+				  <div style="clear:both;"></div>
 			   </div>
 			   <div class="ones">
+			      <div class="pickBtn">0</div>
+			      <div class="pickBtn">1</div>
+				  <div class="pickBtn">2</div>
+				  <div class="pickBtn">3</div>
+				  <div class="pickBtn">4</div>
+				  <div style="clear:both;"></div>
+				  <div class="pickBtn">5</div>
+				  <div class="pickBtn">6</div>
+				  <div class="pickBtn">7</div>
+				  <div class="pickBtn">8</div>
+				  <div class="pickBtn">9</div>
+				  <div style="clear:both;"></div>
 			   </div>
 			   <div class="ampm">
+			      <div class="pickBtn">AM</div>
+			      <div class="pickBtn">PM</div>
+				  <div style="clear:both;"></div>
 			   </div>
 		   </div>
 		   <div style="clear:both;"></div>
 	   </div>
 	   <div class="lowerSection">
+	     <div class="controlBtn">Clear</div>
+		 <div class="timeDisplayBox">
+		     <div class="display displayHr">00</div>
+			 <div class="display displayColon">:</div>
+			 <div class="display display10s">0</div>
+			 <div class="display displayOnes">0</div>
+			 <div class="display displayAMPM">AM</div>
+		 </div>
+		 <div class="controlBtn">Set</div>
+		 <div style="clear:both;"></div>
 	   </div>
    </div>
    
