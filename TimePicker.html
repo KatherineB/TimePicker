@@ -4,37 +4,67 @@
 <style>
 .timepickerMainView{
    border-style: solid;
+   border-color: #999;
    border-width: 3px;
+   border-radius: 12px;
    background-color: #ccc;
-   width: 360px;
+   width: 304px;
    font-family: arial, "san serif";
    font-size: 16px;
 }
 .pickBtn{
   margin: 3px;
   border-style: solid;
+  border-color: #aaa;
   border-width: 1px;
+  border-radius: 5px;
   height: 18px;
   width: 22px;
   float: left;
   text-align: center;
-  background-color: #fff;
+  background-color: #eee;
+}
+.pickBtnL{
+  margin: 3px;
+  border-style: solid;
+  border-color: #aaa;
+  border-width: 1px;
+  border-radius: 5px;
+  height: 18px;
+  width: 30px;
+  float: left;
+  text-align: center;
+  background-color: #eee;
 }
 .hourPanel{
    background-color: #fff;
    float: left;
+   padding-left: 20px;
+   border-top-left-radius: 12px;
 }
 .rightPanel{
    background-color: #fff;
    float: right;
+   width: 180px;
+   border-top-right-radius: 12px;
+}
+.ones{
+   padding-left: 18px;
+}
+.ampm{
+   padding-left: 40px;
 }
 .lowerSection{
    background-color: #ccc;
    height: 40px;
+   border-bottom-left-radius: 12px;
+   border-bottom-right-radius: 12px;
 }
 .controlBtn{
   background-color: #fff;
+  border-radius: 6px;
   margin: 8px;
+  margin-top: 14px;
   float: left;
   width: 55px;
   text-align: center;
@@ -42,6 +72,7 @@
 .timeDisplayBox{
   background-color: #fff;
   margin: 8px;
+  width: 128px;
   float: left;
   font-size: 24px;
   text-align: center;
@@ -50,7 +81,32 @@
   float: left;
   margin: 2px;
 }
-
+.displayHr{
+  background-color: #fff;
+  padding-top: 10px;
+  margin-top: -8px;
+  margin-left: -2px;
+  padding-left: 2px;
+  padding-right: 4px; 
+}
+.display10s{
+  padding-top: 10px;
+  margin-top: -8px;
+  background-color: #fff;
+}
+.displayOnes{
+  padding-top: 10px;
+  margin-top: -8px;
+  background-color: #fff;
+}
+.displayAMPM{
+  padding-top: 10px;
+  margin-top: -8px;
+  width: 42px;
+  background-color: #fff;
+  margin-left: 5px;
+  padding-right: 0px;
+}
 </style>
 
 </head>
@@ -101,8 +157,8 @@
 				  <div style="clear:both;"></div>
 			   </div>
 			   <div class="ampm">
-			      <div class="pickBtn">AM</div>
-			      <div class="pickBtn">PM</div>
+			      <div class="pickBtnL">AM</div>
+			      <div class="pickBtnL">PM</div>
 				  <div style="clear:both;"></div>
 			   </div>
 		   </div>
