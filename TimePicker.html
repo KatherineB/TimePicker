@@ -3,9 +3,13 @@
 <title>TimePicker</title>
 <style>
 .timeBox{
-   width: 130px;
+   width: 115px;
    height: 25px;
-   font-size: 20px;
+   padding-left: 15px;
+   border-style: solid;
+   border-width: 1px;
+   font-size: 22px;
+   font-family: arial, "san serif";
 }
 .timepickerMainView{
    border-style: solid;
@@ -16,6 +20,7 @@
    width: 304px;
    font-family: arial, "san serif";
    font-size: 16px;
+   display: none;
 }
 .pickBtn{
   margin: 3px;
@@ -58,7 +63,7 @@
    border-top-right-radius: 12px;
 }
 .ones{
-   margin-left: 18px;
+   margin-left: 15px;
    background-color: #fff;
    border-top: 3px solid #ccc;
 }
@@ -92,16 +97,17 @@
 }
 .display{
   float: left;
-  margin: 2px;
-  
+  margin: 2px; 
+  font-size: 20px;
 }
 .displayHr{
   background-color: #fff;
   padding-top: 18px;
   margin-top: -16px;
   margin-left: -2px;
-  padding-left: 2px;
-  padding-right: 4px; 
+  padding-left: 6px;
+  padding-right: 0px; 
+  letter-spacing: .13em;
 }
 .displayTens{
   padding-top: 95px;
@@ -111,11 +117,10 @@
 .displayOnes{
   padding-top: 39px;
   margin-top: -37px;
+  width: 11px;
   background-color: #fff;
 }
 .displayAMPM{
- /* padding-top: 10px;
-  margin-top: -8px;*/
   width: 42px;
   background-color: #fff;
   margin-left: 5px;
@@ -124,6 +129,18 @@
 </style>
 <script>
 function setHour(hour){
+   var hourChar0 = hour.charAt(0);
+   var hourChar1 = hour.charAt(1);
+   // adjustments to remove leading zero from one-digit hour times
+   if( hourChar0 === '0'){
+       document.getElementById('displayHr').style.paddingLeft = '19px';
+	   document.getElementById('displayTens').style.marginLeft = '3px';
+	   hour = hourChar1;
+   }
+   else{
+       document.getElementById('displayHr').style.paddingLeft = '6px';
+	   document.getElementById('displayTens').style.marginLeft = '2px';
+   }
    document.getElementById('displayHr').innerHTML = hour;
 }
 
@@ -150,22 +167,25 @@ function setTime(){
 	var one = document.getElementById('displayOnes').innerHTML;
 	var half = document.getElementById('displayAMPM').innerHTML;
 	var time = hr + ":" + ten + one + " " + half;
-	alert(time);
-	document.getElementById('timeBox').value = time; 
+	document.getElementById('timeBox').innerHTML = time; 
+	document.getElementById('timepickerMainView').style.display = 'none';
+}
+function displayPicker(){
+   document.getElementById('timepickerMainView').style.display = 'inline-block';
 }
 </script>
 </head>
 <body>
 <div class="mainDiv">
-   <input type="textbox" id="timeBox" class="timeBox">
-   <div class="timepickerMainView">
+   <div  id="timeBox" class="timeBox" onClick="displayPicker()"></div>
+   <div class="timepickerMainView" id="timepickerMainView">
        <div class="upperSection">
 	       <div class="hourPanel">
 		      <div class="pickBtn" onClick="setHour('01')">1</div>
 			  <div class="pickBtn" onClick="setHour('02')">2</div>
 			  <div class="pickBtn" onClick="setHour('03')">3</div>
 			  <div style="clear:both;"></div>
-			   <div class="pickBtn" onClick="setHour('04')">4</div>
+			  <div class="pickBtn" onClick="setHour('04')">4</div>
 			  <div class="pickBtn" onClick="setHour('05')">5</div>
 			  <div class="pickBtn" onClick="setHour('06')">6</div>
 			  <div style="clear:both;"></div>
@@ -173,7 +193,7 @@ function setTime(){
 			  <div class="pickBtn" onClick="setHour('08')">8</div>
 			  <div class="pickBtn" onClick="setHour('09')">9</div>
 			  <div style="clear:both;"></div>
-			   <div class="pickBtn" onClick="setHour('10')">10</div>
+			  <div class="pickBtn" onClick="setHour('10')">10</div>
 			  <div class="pickBtn" onClick="setHour('11')">11</div>
 			  <div class="pickBtn" onClick="setHour('12')">12</div>
 			  <div style="clear:both;"></div>
@@ -222,8 +242,7 @@ function setTime(){
 		 <div class="controlBtn" onClick="setTime()">Set</div>
 		 <div style="clear:both;"></div>
 	   </div>
-   </div>
-   
+   </div>  
 </div>
 </body>
 </html>
