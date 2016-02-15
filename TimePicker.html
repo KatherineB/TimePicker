@@ -33,6 +33,7 @@
   float: left;
   text-align: center;
   background-color: #eee;
+  cursor: default;
 }
 .pickBtnL{
   margin: 3px;
@@ -45,6 +46,7 @@
   float: left;
   text-align: center;
   background-color: #eee;
+  cursor: default;
 }
 .hourPanel{
    background-color: #fff;
@@ -86,6 +88,7 @@
   float: left;
   width: 55px;
   text-align: center;
+  cursor: default;
 }
 .timeDisplayBox{
   background-color: #fff;
@@ -160,6 +163,8 @@ function clearAll(){
    document.getElementById('displayHr').innerHTML = "00";
    document.getElementById('displayTens').innerHTML = "0";
    document.getElementById('displayOnes').innerHTML = "0"; 
+   document.getElementById('displayHr').style.paddingLeft = '6px';
+   document.getElementById('displayTens').style.marginLeft = '2px';
 }
 function setTime(){
     var hr = document.getElementById('displayHr').innerHTML;	
