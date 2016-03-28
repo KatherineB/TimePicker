@@ -5,17 +5,17 @@ JQuery is not used so that the TimePicker can be used in places where jQuery is 
 
 The filess work on XAMPP.  (I don't have anywhere else to test them.)
 
-### Files Required to Make the TimePicker Work:
+#### Files Required to Make the TimePicker Work:
  * TimePicker.css
  * TimePicker.js
  * TimePicker.php
 
-### Other Files that Might Be Helpful to Look At:
+#### Other Files that Might Be Helpful to Look At:
  * TimePickerDemo.php  - demonstrates how to set up the TimePicker on a web page
  * inputUseTest.php - file from testing to make sure that the input from the TimePicker is actually useable
 
 ### How to Install the TimePicker:
-1. Create a directory named "TimePicker" and put the three required files in it
+1. Create a directory named "TimePicker" and put the three required files listed above in it
 2. Add these two lines to the `<head>` section of the web page:
 ```
 <link href="TimePicker/TimePicker.css" rel="stylesheet">
