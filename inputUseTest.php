@@ -1,8 +1,8 @@
 <html>
 <head>
 <title>Data Use Test for TimePicker</title>
-<link href="TimePicker.css" rel="stylesheet">
-<script src="TimePicker.js"></script>
+<link href="TimePicker/TimePicker.css" rel="stylesheet">
+<script src="TimePicker/TimePicker.js"></script>
 <style>
 .displayBtn{
 	margin: 40px;
@@ -36,7 +36,7 @@ function displayData(){
 <body>
 <div class="mainDiv">
    <div  id="timeBox" class="timeBox" onClick="displayPicker()"></div>  
-   <?php include('TimePicker.php'); ?>
+   <?php include('TimePicker/TimePicker.php'); ?>
    <div>
    <button class="displayBtn" value="Display Data" OnClick="displayData()">Display Data
   </button>
