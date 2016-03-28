@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Data Use Test for TimePicker</title>
+<title>Input Use Test for TimePicker</title>
 <link href="TimePicker/TimePicker.css" rel="stylesheet">
 <script src="TimePicker/TimePicker.js"></script>
 <style>
