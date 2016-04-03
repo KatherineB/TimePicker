@@ -1,4 +1,7 @@
 # TimePicker
+
+![alt text](TP_screenshot_Apr2016.png "April 2016 Screen Shot of TimePicker")
+
 The goal of this project was to create a JavaScript timepicker that is as simple as possible to install on any web page.
 
 JQuery is not used so that the TimePicker can be used in places where jQuery is being avoided.
