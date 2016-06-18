@@ -8,10 +8,9 @@ JQuery is not used so that the TimePicker can be used in places where jQuery is 
 
 The filess work on XAMPP.  (I don't have anywhere else to test them.)
 
-#### Limitations That May be Fixed in the Future
- * TimePicker does not have edge detection
+#### Current Limitations
  * TimePicker does not work properly if more than one is placed on the same page
- * TimePicer is not responsive and probably not workable for mobile devices 
+ * TimePicker is not responsive and not workable for mobile devices 
  
 #### Files Required to Make the TimePicker Work:
  * TimePicker.css

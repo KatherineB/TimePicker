@@ -45,6 +45,36 @@ function setTime(){
 	document.getElementById('timepickerMainView').style.display = 'none';
 }
 function displayPicker(){
-   document.getElementById('timepickerMainView').style.display = 'inline-block';
+	/*  Edge detection must take place before the timepicker is displayed on the
+	    screen so it is not possible to use the timepicker's position.  The position  
+		of the input box is used instead.  Position limits measured in advance during 
+		testing are used to determine if there is enough space.
+	*/
+	var MINIMUM_ALLOWABLE_VERTICAL_DIFF = 205;
+	var MINIMUM_ALLOWABLE_HORIZONTAL_DIFF = 331;
+	var VERTICAL_ADJUSTMENT = -190;
+	var HORIZONTAL_ADJUSTMENT = -180;
+	
+	var timeBoxPos = timeBox.getBoundingClientRect();
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	
+	var vertDiff = h - timeBoxPos.top;
+	if(vertDiff < MINIMUM_ALLOWABLE_VERTICAL_DIFF){
+	     document.getElementById('timepickerMainView').style.marginTop = VERTICAL_ADJUSTMENT;
+	}
+	else{
+		document.getElementById('timepickerMainView').style.marginTop = '0';
+	}
+	
+	var horizDiff = w - timeBoxPos.left;
+	if(horizDiff < MINIMUM_ALLOWABLE_HORIZONTAL_DIFF){
+	    document.getElementById('timepickerMainView').style.marginLeft = HORIZONTAL_ADJUSTMENT;
+	}
+	else{
+		document.getElementById('timepickerMainView').style.marginLeft = '0';
+	}
+	
+    document.getElementById('timepickerMainView').style.display = 'inline-block';
 }
 
