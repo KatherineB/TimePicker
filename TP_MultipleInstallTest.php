@@ -15,34 +15,35 @@
 <div class="mainDiv">
    <div class="timepickerBox">
 	   <div   class="timeBox" onClick="displayPicker()"></div>  
-	   <?php include('TimePicker/TimePicker.php'); ?>
+	   <?php include('TimePicker/TimePickerMultiTest.php'); ?>
    </div>
   <div class="timepickerBox">
 	   <div   class="timeBox" onClick="displayPicker()"></div>  
-	   <?php include('TimePicker/TimePicker.php'); ?>
+	   <?php include('TimePicker/TimePickerMultiTest.php'); ?>
    </div>
    <div style="clear:both;"></div>
    <div class="timepickerBox">
 	   <div   class="timeBox" onClick="displayPicker()"></div>  
-	   <?php include('TimePicker/TimePicker.php'); ?>
+	   <?php include('TimePicker/TimePickerMultiTest.php'); ?>
    </div>
    <div class="timepickerBox">
 	   <div   class="timeBox" onClick="displayPicker()"></div>  
-	   <?php include('TimePicker/TimePicker.php'); ?>
+	   <?php include('TimePicker/TimePickerMultiTest.php'); ?>
    </div>
    <div style="clear:both;"></div>
 </div>
 <script>
- var TPB_list = document.getElementsByClassName("timeBox");
+  var TPB_list = document.getElementsByClassName("timeBox");
   var TPMV_list = document.getElementsByClassName("timepickerMainView");
-/*	alert(TP_list.length);
-	TP_list[0].setAttribute("id", "tp0");
-	TP_list[3].setAttribute("id", "tp3"); */
+  var TP_ids = []; 
+
 	for (var i=0; i<TPB_list.length; i++){
 		TPB_list[i].setAttribute("id", "tpb" + i);	
 		TPB_list[i].setAttribute("onClick", "displayPicker("+i+")");
 		TPMV_list[i].setAttribute("id", "tpmv" + i);
+		TP_ids[i] = "tpmv" + i;
 	}
+	alert(TP_ids[0]);
 </script>
 </body>
 </html>
