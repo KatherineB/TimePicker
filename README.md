@@ -4,6 +4,8 @@
 
 The goal of this project was to create a JavaScript timepicker that is as simple as possible to install on any web page.
 
+I also wanted to make it possible for the user to pick any number of minutes quickly without having to perform multiple clicks on the same button.  This is so that the TimePicker could be used for things like recording data, not just scheduling events.
+
 JQuery is not used so that the TimePicker can be used in places where jQuery is being avoided.
 
 The filess work on XAMPP.  (I don't have anywhere else to test them.)
