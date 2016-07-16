@@ -1,3 +1,18 @@
+ /* This code is for determining how many timepickers are installed on the page,
+    creating arrays for them and giving them unique ids for later individual 
+    referencing.
+*/	
+    var TPB_list = document.getElementsByClassName("timeBox");
+    var TPMV_list = document.getElementsByClassName("timepickerMainView");
+    var TP_ids = []; 
+
+	for (var i=0; i<TPB_list.length; i++){
+		TPB_list[i].setAttribute("id", "tpb" + i);	
+		TPB_list[i].setAttribute("onClick", "displayPicker("+i+")");
+		TPMV_list[i].setAttribute("id", "tpmv" + i);
+		TP_ids[i] = "tpmv" + i;
+	}
+	alert(TP_ids[0]);
 
 function displayPicker(id_num){
 	/*  Edge detection must take place before the timepicker is displayed on the
@@ -34,6 +49,10 @@ function displayPicker(id_num){
 	
     document.getElementById(mainViewTP).style.display = 'inline-block';
 	
+	
+	/* All buttons must be given unique ids in case more than one timepicker is
+	   installed on the page
+	*/
 	var pickBtnHr1_list = document.getElementsByClassName("pickBtnHr1");
 	var pickBtnHr2_list = document.getElementsByClassName("pickBtnHr2");
 	var pickBtnHr3_list = document.getElementsByClassName("pickBtnHr3");
@@ -105,4 +124,3 @@ function setTime(){
 	document.getElementById('timeBox').innerHTML = time; 
 	document.getElementById('timepickerMainView').style.display = 'none';
 }
-
