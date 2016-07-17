@@ -20,12 +20,12 @@
 		   </div>
 		   <div class="rightPanel">
 		       <div class="tens">
-			      <div class="pickBtn" onClick="setTens('0')">0</div>
-			      <div class="pickBtn" onClick="setTens('1')">1</div>
-				  <div class="pickBtn" onClick="setTens('2')">2</div>
-				  <div class="pickBtn" onClick="setTens('3')">3</div>
-				  <div class="pickBtn" onClick="setTens('4')">4</div>
-				  <div class="pickBtn" onClick="setTens('5')">5</div>
+			      <div class="pickBtn pickBtnTens0" onClick="setTens('0')">0</div>
+			      <div class="pickBtn pickBtnTens1" onClick="setTens('1')">1</div>
+				  <div class="pickBtn pickBtnTens2" onClick="setTens('2')">2</div>
+				  <div class="pickBtn pickBtnTens3" onClick="setTens('3')">3</div>
+				  <div class="pickBtn pickBtnTens4" onClick="setTens('4')">4</div>
+				  <div class="pickBtn pickBtnTens5" onClick="setTens('5')">5</div>
 				  <div style="clear:both;"></div>
 			   </div>
 			   <div class="ones">
