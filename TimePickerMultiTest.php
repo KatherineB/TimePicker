@@ -29,17 +29,17 @@
 				  <div style="clear:both;"></div>
 			   </div>
 			   <div class="ones">
-			      <div class="pickBtn" onClick="setOnes('0')">0</div>
-			      <div class="pickBtn" onClick="setOnes('1')">1</div>
-				  <div class="pickBtn" onClick="setOnes('2')">2</div>
-				  <div class="pickBtn" onClick="setOnes('3')">3</div>
-				  <div class="pickBtn" onClick="setOnes('4')">4</div>
+			      <div class="pickBtn pickBtnOnes0" >0</div>
+			      <div class="pickBtn pickBtnOnes1" onClick="setOnes('1')">1</div>
+				  <div class="pickBtn pickBtnOnes2" onClick="setOnes('2')">2</div>
+				  <div class="pickBtn pickBtnOnes3" onClick="setOnes('3')">3</div>
+				  <div class="pickBtn pickBtnOnes4" onClick="setOnes('4')">4</div>
 				  <div style="clear:both;"></div>
-				  <div class="pickBtn" onClick="setOnes('5')">5</div>
-				  <div class="pickBtn" onClick="setOnes('6')">6</div>
-				  <div class="pickBtn" onClick="setOnes('7')">7</div>
-				  <div class="pickBtn" onClick="setOnes('8')">8</div>
-				  <div class="pickBtn" onClick="setOnes('9')">9</div>
+				  <div class="pickBtn pickBtnOnes5" onClick="setOnes('5')">5</div>
+				  <div class="pickBtn pickBtnOnes6" onClick="setOnes('6')">6</div>
+				  <div class="pickBtn pickBtnOnes7" onClick="setOnes('7')">7</div>
+				  <div class="pickBtn pickBtnOnes8" onClick="setOnes('8')">8</div>
+				  <div class="pickBtn pickBtnOnes9" onClick="setOnes('9')">9</div>
 				  <div style="clear:both;"></div>
 			   </div>
 			   <div class="ampm">

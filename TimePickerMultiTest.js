@@ -12,7 +12,6 @@
 		TPMV_list[i].setAttribute("id", "tpmv" + i);
 		TP_ids[i] = "tpmv" + i;
 	}
-	alert(TP_ids[0]);
 
 function displayPicker(id_num){
 	/*  Edge detection must take place before the timepicker is displayed on the
@@ -71,12 +70,23 @@ function displayPicker(id_num){
 	var pickBtnTens3_list = document.getElementsByClassName("pickBtnTens3");
 	var pickBtnTens4_list = document.getElementsByClassName("pickBtnTens4");
 	var pickBtnTens5_list = document.getElementsByClassName("pickBtnTens5");
+	var pickBtnOnes0_list = document.getElementsByClassName("pickBtnOnes0");
+	var pickBtnOnes1_list = document.getElementsByClassName("pickBtnOnes1");
+	var pickBtnOnes2_list = document.getElementsByClassName("pickBtnOnes2");
+	var pickBtnOnes3_list = document.getElementsByClassName("pickBtnOnes3");
+	var pickBtnOnes4_list = document.getElementsByClassName("pickBtnOnes4");
+	var pickBtnOnes5_list = document.getElementsByClassName("pickBtnOnes5");
+	var pickBtnOnes6_list = document.getElementsByClassName("pickBtnOnes6");
+	var pickBtnOnes7_list = document.getElementsByClassName("pickBtnOnes7");
+	var pickBtnOnes8_list = document.getElementsByClassName("pickBtnOnes8");
+	var pickBtnOnes9_list = document.getElementsByClassName("pickBtnOnes9");
 	
 	var BTNam_list = document.getElementsByClassName("pickBtnLam");
 	var BTNpm_list = document.getElementsByClassName("pickBtnLpm");
 	
 	var displayHr_list = document.getElementsByClassName("displayHr");
 	var displayTens_list = document.getElementsByClassName("displayTens");
+	var displayOnes_list = document.getElementsByClassName("displayOnes");
 	var displayAMPM_list = document.getElementsByClassName("displayAMPM");
 	
 	for (var i=0; i<BTNam_list.length; i++){
@@ -118,6 +128,27 @@ function displayPicker(id_num){
 		pickBtnTens5_list[i].setAttribute("id", "pickBtnTens5" + i);	
 		pickBtnTens5_list[i].setAttribute("onClick", "setTens('5'," + i + ")");		
 		
+		pickBtnOnes0_list[i].setAttribute("id", "pickBtnOnes0" + i);	
+		pickBtnOnes0_list[i].setAttribute("onClick", "setOnes('0'," + i + ")");
+		pickBtnOnes1_list[i].setAttribute("id", "pickBtnOnes1" + i);	
+		pickBtnOnes1_list[i].setAttribute("onClick", "setOnes('1'," + i + ")");
+		pickBtnOnes2_list[i].setAttribute("id", "pickBtnOnes2" + i);	
+		pickBtnOnes2_list[i].setAttribute("onClick", "setOnes('2'," + i + ")");
+		pickBtnOnes3_list[i].setAttribute("id", "pickBtnOnes3" + i);	
+		pickBtnOnes3_list[i].setAttribute("onClick", "setOnes('3'," + i + ")");
+		pickBtnOnes4_list[i].setAttribute("id", "pickBtnOnes4" + i);	
+		pickBtnOnes4_list[i].setAttribute("onClick", "setOnes('4'," + i + ")");
+		pickBtnOnes5_list[i].setAttribute("id", "pickBtnOnes5" + i);	
+		pickBtnOnes5_list[i].setAttribute("onClick", "setOnes('5'," + i + ")");	
+		pickBtnOnes6_list[i].setAttribute("id", "pickBtnOnes6" + i);	
+		pickBtnOnes6_list[i].setAttribute("onClick", "setOnes('6'," + i + ")");
+		pickBtnOnes7_list[i].setAttribute("id", "pickBtnOnes7" + i);	
+		pickBtnOnes7_list[i].setAttribute("onClick", "setOnes('7'," + i + ")");
+		pickBtnOnes8_list[i].setAttribute("id", "pickBtnOnes8" + i);	
+		pickBtnOnes8_list[i].setAttribute("onClick", "setOnes('8'," + i + ")");
+		pickBtnOnes9_list[i].setAttribute("id", "pickBtnOnes9" + i);	
+		pickBtnOnes9_list[i].setAttribute("onClick", "setOnes('9'," + i + ")");	
+		
 		BTNam_list[i].setAttribute("id", "btn_am" + i);	
 		BTNam_list[i].setAttribute("onClick", "setAMPM('AM'," + i + ")");
 		BTNpm_list[i].setAttribute("id", "btn_pm" + i);	
@@ -125,6 +156,7 @@ function displayPicker(id_num){
 		
 		displayHr_list[i].setAttribute("id", "displayHr" + i);
 		displayTens_list[i].setAttribute("id", "displayTens" + i);
+		displayOnes_list[i].setAttribute("id", "displayOnes" + i);
 		displayAMPM_list[i].setAttribute("id", "displayAMPM" + i);
 	}
 }
@@ -152,8 +184,9 @@ function setTens(ten,num){
     document.getElementById(showTens).innerHTML = ten; 
 }
 
-function setOnes(one){
-   document.getElementById('displayOnes').innerHTML = one; 
+function setOnes(one,num){
+	showOnes = "displayOnes" + num;
+   document.getElementById(showOnes).innerHTML = one; 
 }
 
 function setAMPM(half,num){
