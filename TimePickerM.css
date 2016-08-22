@@ -1,0 +1,141 @@
+/* TimePicker CSS */
+
+.timeBox{
+   width: 115px;
+   height: 25px;
+   padding-left: 15px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #999;
+   font-size: 22px;
+   font-family: arial, "san serif";
+}
+.timepickerMainView{
+   border-style: solid;
+   border-color: #999;
+   border-width: 3px;
+   border-radius: 12px;
+   background-color: #ccc;
+   width: 304px;
+   font-family: arial, "san serif";
+   font-size: 16px;
+   display: none;
+   position: absolute; 
+}
+.pickBtn{
+  margin: 3px;
+  border-style: solid;
+  border-color: #aaa;
+  border-width: 1px;
+  border-radius: 5px;
+  height: 18px;
+  width: 22px;
+  float: left;
+  text-align: center;
+  background-color: #eee;
+  cursor: default;
+}
+.pickBtnL{
+  margin: 3px;
+  border-style: solid;
+  border-color: #aaa;
+  border-width: 1px;
+  border-radius: 5px;
+  height: 18px;
+  width: 30px;
+  float: left;
+  text-align: center;
+  background-color: #eee;
+  cursor: default;
+}
+.hourPanel{
+   background-color: #fff;
+   float: left;
+   padding-left: 20px;
+   border-top-left-radius: 12px;
+}
+.rightPanel{
+   background-color: #ccc;
+   float: right;
+   width: 180px;
+   border-top-right-radius: 12px;
+}
+.tens{
+   background-color: #fff;
+   border-top-right-radius: 12px;
+}
+.ones{
+   margin-left: 15px;
+   background-color: #fff;
+   border-top: 3px solid #ccc;
+}
+.ampm{
+   margin-left: 40px;
+   background-color: #fff;
+   border-top: 3px solid #ccc;
+}
+.lowerSection{
+   background-color: #ccc;
+   height: 45px;
+   border-bottom-left-radius: 12px;
+   border-bottom-right-radius: 12px;
+}
+.clearBtn{
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 8px;
+  margin-top: 14px;
+  float: left;
+  width: 55px;
+  text-align: center;
+  cursor: default;
+}
+.setBtn{
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 8px;
+  margin-top: 14px;
+  float: left;
+  width: 55px;
+  text-align: center;
+  cursor: default;
+}
+.timeDisplayBox{
+  background-color: #fff;
+  margin: 8px;
+  width: 128px;
+  float: left;
+  font-size: 24px;
+  text-align: center;
+}
+.display{
+  float: left;
+  margin: 2px; 
+  font-size: 20px;
+}
+.displayHr{
+  background-color: #fff;
+  padding-top: 18px;
+  margin-top: -16px;
+  margin-left: -2px;
+  padding-left: 6px;
+  padding-right: 0px; 
+  letter-spacing: .13em;
+}
+.displayTens{
+  padding-top: 95px;
+  margin-top: -93px;
+  background-color: #fff;
+}
+.displayOnes{
+  padding-top: 39px;
+  margin-top: -37px;
+  width: 11px;
+  background-color: #fff;
+}
+.displayAMPM{
+  width: 42px;
+  background-color: #fff;
+  margin-left: 5px;
+  padding-right: 0px;
+}

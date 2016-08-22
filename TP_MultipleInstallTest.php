@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>TimePicker Multiple Install Test</title>
-<link href="TimePicker/TimePicker.css" rel="stylesheet">
+<link href="TimePicker/TimePickerM.css" rel="stylesheet">
 
 </head>
 <style>

@@ -2,15 +2,15 @@
     creating arrays for them and giving them unique ids for later individual 
     referencing.
 */	
-    var TPB_list = document.getElementsByClassName("timeBox");
-    var TPMV_list = document.getElementsByClassName("timepickerMainView");
-    var TP_ids = []; 
+    var timeBox_list = document.getElementsByClassName("timeBox");
+    var timePickerMV_list = document.getElementsByClassName("timepickerMainView");
+    var timePickerIds_list = []; 
 
-	for (var i=0; i<TPB_list.length; i++){
-		TPB_list[i].setAttribute("id", "tpb" + i);	
-		TPB_list[i].setAttribute("onClick", "displayPicker("+i+")");
-		TPMV_list[i].setAttribute("id", "tpmv" + i);
-		TP_ids[i] = "tpmv" + i;
+	for (var i=0; i<timeBox_list.length; i++){
+		timeBox_list[i].setAttribute("id", "timeBox" + i);	
+		timeBox_list[i].setAttribute("onClick", "displayPicker("+i+")");
+		timePickerMV_list[i].setAttribute("id", "timePickerMV" + i);
+		timePickerIds_list[i] = "timePickerMV" + i;
 	}
 
 function displayPicker(id_num){
@@ -24,9 +24,9 @@ function displayPicker(id_num){
 	var VERTICAL_ADJUSTMENT = "-190px";
 	var HORIZONTAL_ADJUSTMENT = "-180px";
 
-    var mainViewTP = TP_ids[id_num];
+    var mainViewTP = timePickerIds_list[id_num];
 
-	var timeBoxPos = TPB_list[id_num].getBoundingClientRect();
+	var timeBoxPos = timeBox_list[id_num].getBoundingClientRect();
 	var w = window.innerWidth;
 	var h = window.innerHeight;
 	
@@ -88,6 +88,8 @@ function displayPicker(id_num){
 	var displayTens_list = document.getElementsByClassName("displayTens");
 	var displayOnes_list = document.getElementsByClassName("displayOnes");
 	var displayAMPM_list = document.getElementsByClassName("displayAMPM");
+	var setTime_list = document.getElementsByClassName("setBtn");
+	
 	
 	for (var i=0; i<BTNam_list.length; i++){
 		pickBtnHr1_list[i].setAttribute("id", "pickBtnHr1" + i);	
@@ -158,12 +160,15 @@ function displayPicker(id_num){
 		displayTens_list[i].setAttribute("id", "displayTens" + i);
 		displayOnes_list[i].setAttribute("id", "displayOnes" + i);
 		displayAMPM_list[i].setAttribute("id", "displayAMPM" + i);
+		
+		setTime_list[i].setAttribute("id", "setTime" + i);	
+		setTime_list[i].setAttribute("onClick", "setTime(" + i + ")");
 	}
 }
 
 function setHour(hour,num){
-   showHr = "displayHr" + num;
-   showTens = "displayTens" + num;
+   var showHr = "displayHr" + num;
+   var showTens = "displayTens" + num;
    var hourChar0 = hour.charAt(0);
    var hourChar1 = hour.charAt(1);
    // adjustments to remove leading zero from one-digit hour times
@@ -180,12 +185,12 @@ function setHour(hour,num){
 }
 
 function setTens(ten,num){
-	showTens = "displayTens" + num;
+	var showTens = "displayTens" + num;
     document.getElementById(showTens).innerHTML = ten; 
 }
 
 function setOnes(one,num){
-	showOnes = "displayOnes" + num;
+	var showOnes = "displayOnes" + num;
    document.getElementById(showOnes).innerHTML = one; 
 }
 
@@ -202,12 +207,18 @@ function clearAll(){
    document.getElementById('displayHr').style.paddingLeft = '6px';
    document.getElementById('displayTens').style.marginLeft = '2px';
 }
-function setTime(){
-    var hr = document.getElementById('displayHr').innerHTML;	
-    var ten = document.getElementById('displayTens').innerHTML;
-	var one = document.getElementById('displayOnes').innerHTML;
-	var half = document.getElementById('displayAMPM').innerHTML;
+function setTime(num){
+	var showHr = "displayHr" + num;
+	var showTens = "displayTens" + num;
+	var showOnes = "displayOnes" + num;
+	var showAmPm = "displayAMPM" + num;
+	var showTimeBox = "timeBox" + num;
+	var showTimePickerMV = "timePickerMV" + num;
+    var hr = document.getElementById(showHr).innerHTML;	
+    var ten = document.getElementById(showTens).innerHTML;
+	var one = document.getElementById(showOnes).innerHTML;
+	var half = document.getElementById(showAmPm).innerHTML;
 	var time = hr + ":" + ten + one + " " + half;
-	document.getElementById('timeBox').innerHTML = time; 
-	document.getElementById('timepickerMainView').style.display = 'none';
+	document.getElementById(showTimeBox).innerHTML = time; 
+	document.getElementById(showTimePickerMV).style.display = 'none';
 }

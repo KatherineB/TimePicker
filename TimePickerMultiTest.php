@@ -51,7 +51,7 @@
 		   <div style="clear:both;"></div>
 	   </div>
 	   <div class="lowerSection">
-	     <div class="controlBtn" onClick="clearAll()">Clear</div>
+	     <div class="clearBtn" onClick="clearAll()">Clear</div>
 		 <div class="timeDisplayBox">
 		     <div class="display displayHr" id="displayHr">00</div>
 			 <div class="display displayColon">:</div>
@@ -59,7 +59,7 @@
 			 <div class="display displayOnes" id="displayOnes">0</div>
 			 <div class="display displayAMPM" id="displayAMPM">AM</div>
 		 </div>
-		 <div class="controlBtn" onClick="setTime()">Set</div>
+		 <div class="setBtn" onClick="setTime()">Set</div>
 		 <div style="clear:both;"></div>
 	   </div>
    </div>  
