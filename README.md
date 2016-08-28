@@ -24,7 +24,7 @@ The filess work on XAMPP.  (I don't have anywhere else to test them.)
  * inputUseTest.php - file from testing to make sure that the input from the TimePicker is actually useable
 
 ### How to Install the TimePicker:
-1. In the directory that contains the web page that will use the TimePicker, create a directory named "TimePicker" and put the three required files listed above in it
+1. In the directory that contains the web page that will use the TimePicker, create a directory named "TimePicker" and put the three required files listed above in it.
 2. Add these two lines to the `<head>` section of the web page:
 ```
 <link href="TimePicker/TimePicker.css" rel="stylesheet">
