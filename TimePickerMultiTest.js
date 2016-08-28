@@ -89,7 +89,7 @@ function displayPicker(id_num){
 	var displayOnes_list = document.getElementsByClassName("displayOnes");
 	var displayAMPM_list = document.getElementsByClassName("displayAMPM");
 	var setTime_list = document.getElementsByClassName("setBtn");
-	
+	var clear_list = document.getElementsByClassName("clearBtn");
 	
 	for (var i=0; i<BTNam_list.length; i++){
 		pickBtnHr1_list[i].setAttribute("id", "pickBtnHr1" + i);	
@@ -163,6 +163,9 @@ function displayPicker(id_num){
 		
 		setTime_list[i].setAttribute("id", "setTime" + i);	
 		setTime_list[i].setAttribute("onClick", "setTime(" + i + ")");
+		
+		clear_list[i].setAttribute("id", "clear" + i);	
+		clear_list[i].setAttribute("onClick", "clearAll(" + i + ")");
 	}
 }
 
@@ -199,13 +202,16 @@ function setAMPM(half,num){
    document.getElementById(showAmPm).innerHTML = half; 
 }
 
-function clearAll(){
-   document.getElementById('displayHr').innerHTML = "00";
-   document.getElementById('displayTens').innerHTML = "0";
-   document.getElementById('displayOnes').innerHTML = "0"; 
+function clearAll(num){
+   var showHr = "displayHr" + num;
+   var showTens = "displayTens" + num;
+   var showOnes = "displayOnes" + num;
+   document.getElementById(showHr).innerHTML = "00";
+   document.getElementById(showTens).innerHTML = "0";
+   document.getElementById(showOnes).innerHTML = "0"; 
    // these two lines undo the adjustments made to display single hours properly
-   document.getElementById('displayHr').style.paddingLeft = '6px';
-   document.getElementById('displayTens').style.marginLeft = '2px';
+   document.getElementById(showHr).style.paddingLeft = '6px';
+   document.getElementById(showTens).style.marginLeft = '2px';
 }
 function setTime(num){
 	var showHr = "displayHr" + num;
