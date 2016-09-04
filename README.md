@@ -26,11 +26,13 @@ The filess work on XAMPP.  (I don't have anywhere else to test them.)
 ### How to Install the TimePicker:
 1. In the directory that contains the web page that will use the TimePicker, create a directory named "TimePicker" and put the three required files listed above in it.
 2. Add these two lines to the `<head>` section of the web page:
+
    ```
    <link href="TimePicker/TimePicker.css" rel="stylesheet">
    <script src="TimePicker/TimePicker.js"></script>
    ```
 3. Put these two lines on the web page in the place where you want the TimePicker to be:
+
    ```
    <div  id="timeBox" class="timeBox" onClick="displayPicker()"></div>  
    <?php include('TimePicker/TimePicker.php'); ?>
