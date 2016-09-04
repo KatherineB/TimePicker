@@ -92,29 +92,29 @@ function displayPicker(id_num){
 	var clear_list = document.getElementsByClassName("clearBtn");
 	
 	for (var i=0; i<BTNam_list.length; i++){
-		pickBtnHr1_list[i].setAttribute("id", "pickBtnHr1" + i);	
+		pickBtnHr1_list[i].setAttribute("id", "Hr1pickBtn" + i);	
 		pickBtnHr1_list[i].setAttribute("onClick", "setHour('01'," + i + ")");
-		pickBtnHr2_list[i].setAttribute("id", "pickBtnHr2" + i);	
+		pickBtnHr2_list[i].setAttribute("id", "Hr2pickBtn" + i);	
 		pickBtnHr2_list[i].setAttribute("onClick", "setHour('02'," + i + ")");
-		pickBtnHr3_list[i].setAttribute("id", "pickBtnHr3" + i);	
+		pickBtnHr3_list[i].setAttribute("id", "Hr3pickBtn" + i);	
 		pickBtnHr3_list[i].setAttribute("onClick", "setHour('03'," + i + ")");
-		pickBtnHr4_list[i].setAttribute("id", "pickBtnHr4" + i);	
+		pickBtnHr4_list[i].setAttribute("id", "Hr4pickBtn" + i);	
 		pickBtnHr4_list[i].setAttribute("onClick", "setHour('04'," + i + ")");
-		pickBtnHr5_list[i].setAttribute("id", "pickBtnHr5" + i);	
+		pickBtnHr5_list[i].setAttribute("id", "Hr5pickBtn" + i);	
 		pickBtnHr5_list[i].setAttribute("onClick", "setHour('05'," + i + ")");
-		pickBtnHr6_list[i].setAttribute("id", "pickBtnHr6" + i);	
+		pickBtnHr6_list[i].setAttribute("id", "Hr6pickBtn" + i);	
 		pickBtnHr6_list[i].setAttribute("onClick", "setHour('06'," + i + ")");
-		pickBtnHr7_list[i].setAttribute("id", "pickBtnHr7" + i);	
+		pickBtnHr7_list[i].setAttribute("id", "Hr7pickBtn" + i);	
 		pickBtnHr7_list[i].setAttribute("onClick", "setHour('07'," + i + ")");
-		pickBtnHr8_list[i].setAttribute("id", "pickBtnHr8" + i);	
+		pickBtnHr8_list[i].setAttribute("id", "Hr8pickBtn" + i);	
 		pickBtnHr8_list[i].setAttribute("onClick", "setHour('08'," + i + ")");
-		pickBtnHr9_list[i].setAttribute("id", "pickBtnHr9" + i);	
+		pickBtnHr9_list[i].setAttribute("id", "Hr9pickBtn" + i);	
 		pickBtnHr9_list[i].setAttribute("onClick", "setHour('09'," + i + ")");
-		pickBtnHr10_list[i].setAttribute("id", "pickBtnHr10" + i);	
+		pickBtnHr10_list[i].setAttribute("id", "Hr10pickBtn" + i);	
 		pickBtnHr10_list[i].setAttribute("onClick", "setHour('10'," + i + ")");
-		pickBtnHr11_list[i].setAttribute("id", "pickBtnHr11" + i);	
+		pickBtnHr11_list[i].setAttribute("id", "Hr11pickBtn" + i);	
 		pickBtnHr11_list[i].setAttribute("onClick", "setHour('11'," + i + ")");
-		pickBtnHr12_list[i].setAttribute("id", "pickBtnHr12" + i);	
+		pickBtnHr12_list[i].setAttribute("id", "Hr12pickBtn" + i);	
 		pickBtnHr12_list[i].setAttribute("onClick", "setHour('12'," + i + ")");
 		
 		pickBtnTens0_list[i].setAttribute("id", "pickBtnTens0" + i);	
