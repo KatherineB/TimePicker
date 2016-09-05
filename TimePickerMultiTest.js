@@ -174,7 +174,7 @@ function setHour(hour,num){
    var showTens = "displayTens" + num;
    var hourChar0 = hour.charAt(0);
    var hourChar1 = hour.charAt(1);
-   // adjustments to remove leading zero from one-digit hour times
+   // adjustment to remove leading zero from one-digit hour times
    if( hourChar0 === '0'){  
        document.getElementById(showHr).style.paddingLeft = '19px';
 	   document.getElementById(showTens).style.marginLeft = '3px';
@@ -184,6 +184,17 @@ function setHour(hour,num){
        document.getElementById(showHr).style.paddingLeft = '6px';
 	   document.getElementById(showTens).style.marginLeft = '2px';
    } 
+   
+   /* To adjust for number 11 being a bit narrower than 10 or 12 */
+   if(hour == 11){
+	   document.getElementById(showHr).style.marginLeft = '-2px';
+	   document.getElementById(showHr).style.paddingRight = '1px';
+   }
+   else{
+	  document.getElementById(showHr).style.marginLeft = '-2px';
+	  document.getElementById(showHr).style.paddingRight = '0px';
+   }
+   
    document.getElementById(showHr).innerHTML = hour;
 }
 
