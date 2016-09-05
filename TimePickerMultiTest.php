@@ -1,4 +1,4 @@
-/* HTML for TimePicker Screen */
+<!-- HTML for TimePicker Screen -->
 
 <div class="timepickerMainView" id="timepickerMainView">
        <div class="upperSection">
