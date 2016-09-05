@@ -1,3 +1,5 @@
+/* HTML for TimePicker Screen */
+
 <div class="timepickerMainView" id="timepickerMainView">
        <div class="upperSection">
 	       <div class="hourPanel">
