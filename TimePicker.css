@@ -80,7 +80,17 @@
    border-bottom-left-radius: 12px;
    border-bottom-right-radius: 12px;
 }
-.controlBtn{
+.clearBtn{
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 8px;
+  margin-top: 14px;
+  float: left;
+  width: 55px;
+  text-align: center;
+  cursor: default;
+}
+.setBtn{
   background-color: #fff;
   border-radius: 4px;
   margin: 8px;

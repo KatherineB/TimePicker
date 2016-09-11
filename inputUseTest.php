@@ -2,7 +2,6 @@
 <head>
 <title>Input Use Test for TimePicker</title>
 <link href="TimePicker/TimePicker.css" rel="stylesheet">
-<script src="TimePicker/TimePicker.js"></script>
 <style>
 .displayBtn{
 	margin: 40px;
@@ -13,7 +12,7 @@
 <script>
 function displayData(){
 
-	var time = document.getElementById('timeBox').innerHTML;
+	var time = document.getElementById('timeBox0').innerHTML;
 
 	/* if to deal with times where hour is just one character long */
 	if(time.length == 7){
@@ -35,7 +34,7 @@ function displayData(){
 </head>
 <body>
 <div class="mainDiv">
-   <div  id="timeBox" class="timeBox" onClick="displayPicker()"></div>  
+   <div class="timeBox"></div>  
    <?php include('TimePicker/TimePicker.php'); ?>
    <div>
    <button class="displayBtn" value="Display Data" OnClick="displayData()">Display Data
@@ -45,5 +44,6 @@ function displayData(){
    <div>Minutes: <span id="min"></span></div>
    <div>Day Half: <span id="half"></span></div>
 </div>
+<script src="TimePicker/TimePicker.js"></script>
 </body>
 </html>
