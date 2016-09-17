@@ -40,7 +40,7 @@ The files work on XAMPP.  (I don't have anywhere else to test them.)
    <div class="timeBox"></div>  
    <?php include('TimePicker/TimePicker.php'); ?>
    ```
-4. Before '</body>', add this line:
+4. Near the end of the web page, just before `</body>`, add this line:
 
    ```
    <script src="TimePicker/TimePicker.js"></script>
