@@ -8,7 +8,7 @@ I also wanted to make it possible for the user to pick any number of minutes qui
 
 JQuery is not used so that the TimePicker can be used in places where jQuery is being avoided.
 
-The filess work on XAMPP.  (I don't have anywhere else to test them.)
+The files work on XAMPP.  (I don't have anywhere else to test them.)
 
 #### Current Limitations
  * TimePicker is not responsive and not workable for mobile devices 
@@ -23,8 +23,13 @@ The filess work on XAMPP.  (I don't have anywhere else to test them.)
  * inputUseTest.php - file from testing to make sure that the input from the TimePicker is actually useable
 
 ### How to Install the TimePicker:
-1. In the directory that contains the web page that will use the TimePicker, create a directory named "TimePicker" and put the three required files listed above in it.
-2. Add this line to the `<head>` section of the web page:
+1. In the directory that contains the web page that will contain the TimePicker, create a directory named "TimePicker" and put in it the following files:
+
+   * TimePicker.css
+   * TimePicker.js
+   * TimePicker.php
+
+2. Add this line to the `<head>` section of the web page that is to have the TimePicker installed on it:
 
    ```
    <link href="TimePicker/TimePicker.css" rel="stylesheet">
@@ -35,9 +40,10 @@ The filess work on XAMPP.  (I don't have anywhere else to test them.)
    <div class="timeBox"></div>  
    <?php include('TimePicker/TimePicker.php'); ?>
    ```
-4. Add this line at the end of page:
+4. Before '</body>', add this line:
 
    ```
    <script src="TimePicker/TimePicker.js"></script>
    ```
+5. If the web page containing the newly installed TimePicker is a '.html' file, change the file extension to '.php' instead.
   
